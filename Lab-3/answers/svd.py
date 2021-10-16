@@ -1,0 +1,12 @@
+import numpy as np
+A = np.array([[1, 0, 0], [1, 1, 0], [0, 0, 1]])
+u, s, v = np.linalg.svd(A)
+print("left singular matrix: ")
+print(u)
+print("right singular matrix")
+print(v)
+print("matrix with eigen values")
+print(s)
+np.diag(s)
+print("reconstructed matrix")
+print(np.dot(u, np.dot(np.diag(s), v)))
